@@ -33,7 +33,7 @@ public class EarthRotation {
 
             window.drawSolarObjectAbout(distanceEarth, rotationAngle++, 15, "BLUE", 0, rotationEarth); // earth
 
-            window.drawSolarObjectAbout(80, rotationAngle++, 5, "GREY", 0, rotationMoon); // moon
+            window.drawSolarObjectAbout(15, rotationMoon += 4, 5, "GREY", distanceEarth, rotationAngle); // moon
             window.finishedDrawing();
 
         }
