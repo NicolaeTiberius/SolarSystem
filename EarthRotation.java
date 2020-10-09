@@ -3,33 +3,41 @@ public class EarthRotation {
     public EarthRotation() {
 
     }
-    
-    public void drawWindow(){
-        //Draw the window
-        SolarSystem window = new SolarSystem(600, 400);
+
+    public void drawWindow() {
+        // Draw the window
+        SolarSystem window = new SolarSystem(800, 600);
     }
-    
-    public void earthMoving(){
-    
-        //make the Earth rotate
 
-        SolarSystem window = new SolarSystem(600, 400);
-        int angleE = 90;
-        int angleS = 90;
-        int distanceE = -5;
-        int distanceS = 35;
+    public void earthMoving() {
 
-        for (int rotation = 0; rotation < 50; rotation++) {
+        // make the Earth rotate
 
+        SolarSystem window = new SolarSystem(800, 600);
+        int angleSun = 0;
+        int distanceSun = 0;
+
+        int distanceEarth = 60;
+
+        int rotationAngle = 90;
+
+        int rotationEarth = 10;
+
+        int distanceMoon = 80;
+
+        int rotationMoon = 45;
+
+        while (true) {
+
+            window.drawSolarObject(distanceSun, angleSun, 40, "YELLOW"); // sun
+
+            window.drawSolarObjectAbout(distanceEarth, rotationAngle++, 15, "BLUE", 0, rotationEarth); // earth
+
+            window.drawSolarObjectAbout(80, rotationAngle++, 5, "GREY", 0, rotationMoon); // moon
             window.finishedDrawing();
-            window.drawSolarObject(distanceS, angleS, 40, "YELLOW");
-            window.drawSolarObjectAbout(distanceE, angleE, 15, "BLUE", rotation, rotation * angleE);
-            window.finishedDrawing();
+
         }
 
-
     }
 
-
 }
-
