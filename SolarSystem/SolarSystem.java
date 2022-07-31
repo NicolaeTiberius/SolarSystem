@@ -7,7 +7,7 @@ import java.util.*;
 /**
  * This class provides a graphical user interface to a model of the solar system
  * 
- * @author Joe Finney
+ *
  */
 public class SolarSystem extends JFrame {
 	private int width = 300;
